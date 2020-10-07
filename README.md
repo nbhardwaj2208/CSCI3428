@@ -1,23 +1,30 @@
-# CSCI2356_AutismNS
-Created for Mobile App Development's Service Learning Project at Saint Mary's University for Autism NS.
-By: Jay Patel      (A00433907)
-    Justin Gray    (A00426753)
-    Vitor Jeronimo (A00431599)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-See the open-source code at: https://github.com/just1ngray/CSCI2356_AutismNS
+## Getting Started
 
-Autism Nova Scotia: (http://www.autismnovascotia.ca/about-us)
-===================
-Vision:  A world where all people living with autism spectrum disorder (ASD) can live their lives fully.
-Mandate: We are a community-based organization that fosters understanding, acceptance, and inclusion for
-          those living with autism spectrum disorder (ASD) throughout Nova Scotia.
-         
-Service Learning at Saint Mary's: (https://smu.ca/campus-life/service-learning.html)
-=================================
-Course-Based Service Learning is an experiential learning approach which links community-based experience 
-with course content. Service Learning involves a range of activities intended to benefit the service 
-provider (the student) and the recipient (the community partner) while maintaining a focus on learning. At 
-Saint Mary's University, various approaches and types of assignments are adopted in courses which include 
-service learning components. Students participate in unpaid service experience, which is in addition to regular 
-class hours, and complete assignments which incorporate reflection about their experiences. Sometimes services 
-learning is an optional assignment, but it may also be a required element of a course. 
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
