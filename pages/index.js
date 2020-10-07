@@ -1,15 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Link from "next/link";
 
-export default function Home() {
+export default function IndexPage() {
   return (
-      <div>
-        <Head>
-            <title>Email System</title>
-        </Head>
-        <main>
-          <a>Hello World!</a>
-        </main>
-      </div>
+    <div>
+      Hello World.{" "}
+      <Link href="/about">
+        <a>About</a>
+      </Link>
+    </div>
   );
 }
