@@ -10,5 +10,6 @@ export default function Home() {
         <main>
           <a>Hello World!</a>
         </main>
+      </div>
   );
 }
