@@ -4,7 +4,10 @@
   "description": "A training email system for Autism NS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm run dev",
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "server": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,9 @@
     "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-     "mongoose": "^5.10.7",
-    "express": "^4.17.1"
+    "mongoose": "^5.10.8",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   }
 }
