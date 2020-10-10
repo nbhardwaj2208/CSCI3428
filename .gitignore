@@ -11,6 +11,7 @@ client/build
 
 # misc
 client/.DS_Store
+.DS_Store
 
 # debug
 client/npm-debug.log*
