@@ -50,9 +50,9 @@ const accountSchema = new mongoose.Schema({
     default: [],
   },
   child_id: {
-    type: String,
-    maxlength: 128,
-  },
+      type: String,
+      maxlength: 128
+  }
 });
 
 /**
@@ -67,6 +67,9 @@ accountSchema.methods.getAuthToken = function () {
     {
       _id: this._id,
       __v: this.__v,
+      name: this.name,
+      email: this.email,
+      child_id: this.child_id
     },
     "todo_change2_supersecret_key"
   );
