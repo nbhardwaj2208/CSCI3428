@@ -19,19 +19,6 @@ module.exports = mongoose.model(
       type: mongoose.Types.ObjectId,
       ref: "Specialist",
     },
-    name: {
-      type: String,
-      maxlength: 128,
-      default: "",
-      required: true,
-    },
-    email: {
-      type: String,
-      maxlength: 256,
-      default: "student@autismns.ca",
-      required: true,
-    },
-
     settings: [String], // todo flesh out if time
   })
 );
