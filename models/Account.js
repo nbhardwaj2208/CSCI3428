@@ -48,6 +48,10 @@ const accountSchema = new mongoose.Schema({
     required: true,
     default: [],
   },
+  child_id: {
+    type: String,
+    maxlength: 128,
+  },
 });
 
 /**
@@ -78,21 +82,22 @@ accountSchema.methods.isValidPassword = async function (plainTextPassword) {
   return await bcrypt.compare(plainTextPassword, this.password);
 };
 
-// we have to use function() instead of () => {} for an accessible 'this'
+/**
+ * Ensures a changed password is saved as a bcrypt hash, not plain-text.
+ * @author Justin Gray (A00426753)
+ */
 accountSchema.pre("save", function (next) {
   if (!this.isModified("password")) return next();
 
   this.increment(); // changing the password will expire the jwt
   bcrypt
     .genSalt(12)
-    .then(function (salt) {
-      return bcrypt.hash(this.password, salt);
-    })
-    .then(function (hashed) {
+    .then((salt) => bcrypt.hash(this.password, salt))
+    .then((hashed) => {
       this.password = hashed;
       return next();
     })
-    .catch((err) => console.error(JSON.stringify(err)));
+    .catch((err) => console.error(err));
 });
 
 module.exports = mongoose.model("Account", accountSchema);
