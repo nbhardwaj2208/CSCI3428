@@ -21,6 +21,7 @@ const accountSchema = new mongoose.Schema({
     maxlength: 256,
     default: undefined,
     required: true,
+    unique: true,
   },
   password: String, // bcrypt hashed
   inbox: [
