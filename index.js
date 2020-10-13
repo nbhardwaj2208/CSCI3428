@@ -5,12 +5,11 @@
 const express = require("express");
 const next = require("next");
 
-// @ts-ignore
 const app = next({
   dir: "./client",
 });
 const handle = app.getRequestHandler();
-const port = 3384;
+const port = process.env.G2_PORT || 3384;
 
 app
   .prepare()
@@ -22,7 +21,11 @@ app
 
     // startup functions
     require("./startup/routes")(server); // setup '/api' routes
-    require("./startup/database").connect(); // connect to MongoDB
+    require("./startup/database")
+      .connect() // connect to MongoDB
+      .then((didConnect) => {
+        if (didConnect) require("./startup/setupAccounts")();
+      });
 
     // render NextJS react content (generated using 'npm run build')
     server.get("*", (req, res) => {
